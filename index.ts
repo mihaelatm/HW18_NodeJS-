@@ -62,7 +62,7 @@ const myCar: Car = {
 
 carInfo(myCar);
 
-///==============Task2=======================
+///==============Task3=======================
 
 interface Product {
   name: string;
@@ -88,3 +88,23 @@ const discount = 20;
 const newPrice = calculateDiscount(product, discount);
 
 console.log(`New price for ${product.name}: $${newPrice}`);
+
+///==============Task4=======================
+
+interface Employee {
+  name: string;
+  salary: number;
+}
+
+const employees: Employee[] = [
+  { name: "John", salary: 50000 },
+  { name: "Jane", salary: 60000 },
+  { name: "Mike", salary: 55000 },
+];
+
+function getSalary(employees: Employee[]): number[] {
+  return employees.map((employee) => employee.salary);
+}
+
+const salaries = getSalary(employees);
+console.log(salaries);
