@@ -108,3 +108,32 @@ function getSalary(employees: Employee[]): number[] {
 
 const salaries = getSalary(employees);
 console.log(salaries);
+
+///==============Task5=======================
+
+interface Person {
+  firstName: string;
+  lastName: string;
+}
+
+interface Student extends Person {
+  grade: number;
+}
+
+const student: Student = {
+  firstName: "Anna",
+  lastName: "Smith",
+  grade: 98,
+};
+
+function studentInfo(student: Student): void {
+  console.log(
+    `
+        Full Name: ${student.firstName} ${student.lastName},
+        Grade: ${student.grade},
+        
+        `
+  );
+}
+
+studentInfo(student);
