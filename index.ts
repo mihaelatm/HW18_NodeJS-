@@ -61,3 +61,30 @@ const myCar: Car = {
 };
 
 carInfo(myCar);
+
+///==============Task2=======================
+
+interface Product {
+  name: string;
+  price: number;
+  discount: number;
+}
+
+interface CalculateDiscount {
+  (product: Product, discount: number): number;
+}
+const calculateDiscount: CalculateDiscount = (product, discount) => {
+  return product.price - (product.price * discount) / 100;
+};
+
+const product: Product = {
+  name: "Laptop",
+  price: 1000,
+  discount: 20,
+};
+
+const discount = 20;
+
+const newPrice = calculateDiscount(product, discount);
+
+console.log(`New price for ${product.name}: $${newPrice}`);
