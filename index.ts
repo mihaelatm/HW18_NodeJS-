@@ -137,3 +137,16 @@ function studentInfo(student: Student): void {
 }
 
 studentInfo(student);
+
+///==============Task6=======================
+
+interface concatStrings {
+  (str: string, str2: string): string;
+}
+
+const concatStrings: concatStrings = (str1, str2) => {
+  return str1 + str2;
+};
+
+const result = concatStrings("Hello, ", "world!");
+console.log(result);
